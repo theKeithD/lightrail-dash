@@ -15,10 +15,16 @@ If the database structure has been modified, run `rake db:autoupgrade`.
 - `/doc` - Documentation!
 - `/doc/app/Widget.html` - Widget documentation page, contains a good amount of info to get started on
 - `/dashboards/` - A listing of all Dashboards
+- `/dashboards/add` - Create a new Dashboard
 - `/dashboards/1` - Display a specific Dashboard
+- `/dashboards/1/edit` - Edit the details of a specific Dashboard
 - `/dashboards/1/widgets` - Display the Widgets belonging to a specific Dashboard
 - `/widgets/` - A listing of all Widgets available for use
 - `/widgets/1` - Display a specific Widget. Redirects to the appropriate Widget type.
 - `/widgets/1/embed` - HTML to include the given Widget on another page
-- `/ganglia_graphs/1/data.json` - JSON data for a Ganglia graph
+- `/ganglia_graphs/1/data.json` - JSON data for a Ganglia graph (only applies to GangliaGraph)
+- Replace `widget_types` in the following line with a Widget type like `sonar_reports` or `jira_issue_summaries`
+    - `/widget_types/add` - Create a new WidgetType item
+    - `/widget_types/1` - Display a specific WidgetType
+    - `/widget_types/1/edit` - Edit the details of a specific WidgetType
 
