@@ -3,7 +3,7 @@ A Rails application designed to pull data from various reporting sources and dis
 
 ## Installation
 1. Download the contents of this repository.
-2. Run `sh setup_dashboard.sh`. This will ensure that the proper gems are installed and up to date, the documentation is in place and updated, and that the databases are set up properly. After all that, it will start the Rails application.
+2. Run `./setup_dashboard.sh`. This will ensure that the proper gems are installed and up to date, the documentation is in place and updated, and that the databases are set up properly. After all that, it will start the Rails application.
   - To start the application on your own, just run `rails server -d`.
 3. Enjoy!
 
