@@ -53,7 +53,7 @@ module DashboardRails
     # config.assets.prefix = "/assets" 
     
     # Production environment
-    #Rails.env = ActiveSupport::StringInquirer.new('production')
+    Rails.env = ActiveSupport::StringInquirer.new('production')
     
     # Oink memory monitoring
     config.middleware.use(Oink::Middleware, :instruments => :memory)
