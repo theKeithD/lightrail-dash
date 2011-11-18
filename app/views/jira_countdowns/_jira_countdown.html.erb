@@ -1,0 +1,15 @@
+<%= javascript_tag do -%>
+$.ajax({
+  url: '<%= asset_path 'widgets/jira_countdown' %>',
+  cache: true,
+  dataType: "script",
+  success: function() {
+    var jiraCountdown = <%= raw jira_countdown.to_json(:methods => [:html_id, :html_class, :full_project_name, :next_release, :days_remaining]) %>;
+    
+    addJiraCountdownToPage(jiraCountdown<%= if(defined? target_element)
+        ", $('\##{target_element}')"
+        end -%>);
+    setUpJiraCountdown(jiraCountdown);
+  }
+});
+<% end -%>

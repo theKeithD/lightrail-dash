@@ -1,0 +1,18 @@
+<%= javascript_tag do -%>
+$.ajax({
+  url: '<%= asset_path 'widgets/ganglia_graph' %>',
+  cache: true,
+  dataType: "script",
+  success: function() {
+    // set up graph object
+    var graph = <%= raw ganglia_graph.to_json(:methods => [:html_id, :html_class]) %>;
+    
+    // add graph skeleton to document
+    addGraphToPage(graph<%= if(defined? target_element)
+        ", $('\##{target_element}')"
+        end -%>);
+    // generate graph
+    setUpGraph(graph);
+  }
+});
+<% end -%> 

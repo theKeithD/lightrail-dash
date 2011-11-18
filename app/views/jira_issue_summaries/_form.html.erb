@@ -1,0 +1,53 @@
+<%= form_for(@jira_issue_summary) do |f| %>
+  <% if @jira_issue_summary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jira_issue_summary.errors.count, "error") %> prohibited this jira_issue_summary from being saved:</h2>
+
+      <ul>
+      <% @jira_issue_summary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :jira_server %><br />
+    <%= f.text_field :jira_server %>
+  </div>
+  <div class="field">
+    <%= f.label :project %><br />
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :statuses_open %><br />
+    <%= f.text_field :statuses_open %>
+  </div>
+  <div class="field">
+    <%= f.label :statuses_in_progress %><br />
+    <%= f.text_field :statuses_in_progress %>
+  </div>
+  <div class="field">
+    <%= f.label :statuses_closed %><br />
+    <%= f.text_field :statuses_closed %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<%= javascript_tag do -%>
+$.ajax({
+  url: '<%= asset_path 'widgets/jira_issue_summary' %>',
+  cache: true,
+  dataType: "script",
+  success: function() {
+    var jiraIssueSummary = <%= raw jira_issue_summary.to_json(:methods => [:html_id, :html_class, :full_project_name, :true_version, :issue_counts, :issue_types]) %>;
+    
+    addJiraIssueSummaryToPage(jiraIssueSummary<%= if(defined? target_element)
+        ", $('\##{target_element}')"
+        end -%>);
+    setUpJiraGraph(jiraIssueSummary);
+  }
+});
+<% end -%>

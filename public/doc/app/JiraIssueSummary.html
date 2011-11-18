@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: JiraIssueSummary</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/jira_issue_summary.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+  
+  
+    <li><a class="include" href="Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-parse_statuses">::parse_statuses</a>
+    
+    <li><a href="#method-i-issue_counts">#issue_counts</a>
+    
+    <li><a href="#method-i-issue_types">#issue_types</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Extensions.html">Extensions</a>
+  
+    <li><a href="./Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+    <li><a href="./Extensions/JiraBase/InstanceMethods.html">Extensions::JiraBase::InstanceMethods</a>
+  
+    <li><a href="./Extensions/Passworded.html">Extensions::Passworded</a>
+  
+    <li><a href="./Extensions/Passworded/InstanceMethods.html">Extensions::Passworded::InstanceMethods</a>
+  
+    <li><a href="./Extensions/PrettyParam.html">Extensions::PrettyParam</a>
+  
+    <li><a href="./Extensions/PrettyParam/InstanceMethods.html">Extensions::PrettyParam::InstanceMethods</a>
+  
+    <li><a href="./Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+    <li><a href="./Extensions/WidgetBase/InstanceMethods.html">Extensions::WidgetBase::InstanceMethods</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardWidget.html">DashboardWidget</a>
+  
+    <li><a href="./DashboardWidgetsController.html">DashboardWidgetsController</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DashboardsHelper.html">DashboardsHelper</a>
+  
+    <li><a href="./GangliaGraph.html">GangliaGraph</a>
+  
+    <li><a href="./GangliaGraphsController.html">GangliaGraphsController</a>
+  
+    <li><a href="./GangliaGraphsHelper.html">GangliaGraphsHelper</a>
+  
+    <li><a href="./GithubCommit.html">GithubCommit</a>
+  
+    <li><a href="./GithubCommitsController.html">GithubCommitsController</a>
+  
+    <li><a href="./GithubCommitsHelper.html">GithubCommitsHelper</a>
+  
+    <li><a href="./HudsonBuildStatus.html">HudsonBuildStatus</a>
+  
+    <li><a href="./HudsonBuildStatusesController.html">HudsonBuildStatusesController</a>
+  
+    <li><a href="./HudsonBuildStatusesHelper.html">HudsonBuildStatusesHelper</a>
+  
+    <li><a href="./JiraCountdown.html">JiraCountdown</a>
+  
+    <li><a href="./JiraCountdownsController.html">JiraCountdownsController</a>
+  
+    <li><a href="./JiraCountdownsHelper.html">JiraCountdownsHelper</a>
+  
+    <li><a href="./JiraIssueSummariesController.html">JiraIssueSummariesController</a>
+  
+    <li><a href="./JiraIssueSummariesHelper.html">JiraIssueSummariesHelper</a>
+  
+    <li><a href="./JiraIssueSummary.html">JiraIssueSummary</a>
+  
+    <li><a href="./RemoteDataHelper.html">RemoteDataHelper</a>
+  
+    <li><a href="./SonarReport.html">SonarReport</a>
+  
+    <li><a href="./SonarReportsController.html">SonarReportsController</a>
+  
+    <li><a href="./SonarReportsHelper.html">SonarReportsHelper</a>
+  
+    <li><a href="./VerticalSpacer.html">VerticalSpacer</a>
+  
+    <li><a href="./VerticalSpacersController.html">VerticalSpacersController</a>
+  
+    <li><a href="./VerticalSpacersHelper.html">VerticalSpacersHelper</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class JiraIssueSummary</h1>
+
+  <div id="description" class="description">
+    
+<p>Model for tracking the number of issues in a JIRA instance. Retrieves
+information both about the status of issues for a particular version, but
+also the type of each issue.</p>
+
+<p>Based on <a href="Extensions/WidgetBase.html">Extensions::WidgetBase</a>,
+which gives it a <code>name</code> property, as well as the
+<code>html_id</code> and <code>html_class</code> virtual properties. This
+is a kind of <a href="Widget.html">Widget</a>. Based on <a
+href="Extensions/JiraBase.html">Extensions::JiraBase</a>, which gives it
+the <code>jira_server</code>, <code>project</code>, <code>version</code>,
+<code>username</code>, and <code>password</code> properties, as well as the
+<code>full_project_name</code> and <code>current_version</code> virtual
+properties.</p>
+
+<h2 id="label-Unique+Properties">Unique Properties</h2>
+<ul><li>
+<p><code>statuses_open</code> (Text): A comma-separated list of issue statuses
+to count as "Open". Default is "<code>Open, Reopened</code>". Required
+property.</p>
+</li><li>
+<p><code>statuses_in_progress</code> (Text): A comma-separated list of issue
+statuses to count as "In Progress". Default is "<code>In Progress, Ready
+for QA, Verified</code>". Required property.</p>
+</li><li>
+<p><code>statuses_closed</code> (Text): A comma-separated list of issue
+statuses to count as "Closed". Default is "<code>Closed, PO
+Approved</code>". Required property.</p>
+</li></ul>
+
+<h2 id="label-Virtual+Properties">Virtual Properties</h2>
+<ul><li>
+<p><code>issue_counts</code> (Hash): Runs JQL queries against a JIRA instance
+to retrieve the number of closed, in progress, and open issues for a given
+project. Hash keys are <code>open</code>, <code>in_progress</code>, and
+<code>closed</code>. Connects to JIRA.</p>
+</li><li>
+<p><code>issue_types</code> (Hash): Runs JQL queries against a JIRA instance
+to retrieve the number of bugs, stories, and tasks for a given project.
+Hash keys are <code>bug</code>, <code>story</code>, and <code>task</code>.
+Connects to JIRA.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-parse_statuses" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parse_statuses</span><span
+            class="method-args">(status_list)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Normalizes a comma-separated list so that each item in the list is wrapped
+in quotation marks.</p>
+          
+
+          
+          <div class="method-source-code" id="parse_statuses-source">
+            <pre><span class="ruby-comment"># File app/models/jira_issue_summary.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_statuses</span>(<span class="ruby-identifier">status_list</span>)
+  <span class="ruby-identifier">status_array</span> = <span class="ruby-identifier">status_list</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;,&quot;</span>)
+  <span class="ruby-identifier">status_array</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">status</span><span class="ruby-operator">|</span>
+    <span class="ruby-string">'&quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">status</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^&quot;/</span>, <span class="ruby-string">&quot;&quot;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/&quot;$/</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;'</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">status_array</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;, &quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- parse_statuses-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- parse_statuses-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-issue_counts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">issue_counts</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Runs JQL queries against a JIRA instance to retrieve the number of closed,
+in progress, and open issues for a given project. Returns a hash with the
+keys <code>open</code>, <code>in_progress</code>, and <code>closed</code>.
+Connects to JIRA.</p>
+          
+
+          
+          <div class="method-source-code" id="issue_counts-source">
+            <pre><span class="ruby-comment"># File app/models/jira_issue_summary.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">issue_counts</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>
+  
+  <span class="ruby-identifier">issue_counts</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">version</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">true_version</span>
+  <span class="ruby-identifier">full_name</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">full_project_name</span>
+  
+  <span class="ruby-comment"># Hooray, magic numbers. Why couldn't you make them optional, API? Let's hope that nobody has more than 9999 issues in any one state at once.</span>
+  <span class="ruby-comment"># If there are anywhere close to 9999 issues, then we could be here all day, anyways.</span>
+  <span class="ruby-identifier">issue_counts</span>[<span class="ruby-string">'open'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND status in ('</span> <span class="ruby-operator">+</span> <span class="ruby-constant">JiraIssueSummary</span>.<span class="ruby-identifier">parse_statuses</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">statuses_open</span>) <span class="ruby-operator">+</span> <span class="ruby-string">')'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">issue_counts</span>[<span class="ruby-string">'in_progress'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND status in ('</span> <span class="ruby-operator">+</span> <span class="ruby-constant">JiraIssueSummary</span>.<span class="ruby-identifier">parse_statuses</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">statuses_in_progress</span>) <span class="ruby-operator">+</span> <span class="ruby-string">')'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">issue_counts</span>[<span class="ruby-string">'closed'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND status in ('</span> <span class="ruby-operator">+</span> <span class="ruby-constant">JiraIssueSummary</span>.<span class="ruby-identifier">parse_statuses</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">statuses_closed</span>) <span class="ruby-operator">+</span> <span class="ruby-string">')'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  
+  <span class="ruby-identifier">issue_counts</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- issue_counts-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- issue_counts-method -->
+
+    
+      <div id="method-i-issue_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">issue_types</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Runs JQL queries against a JIRA instance to retrieve the number of bugs,
+features, and tasks for a given project. Returns a hash with the keys
+<code>bug</code>, <code>feature</code>, and <code>task</code>. Connects to
+JIRA.</p>
+          
+
+          
+          <div class="method-source-code" id="issue_types-source">
+            <pre><span class="ruby-comment"># File app/models/jira_issue_summary.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">issue_types</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>
+  
+  <span class="ruby-identifier">issue_types</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">version</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">true_version</span>
+  <span class="ruby-identifier">full_name</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">full_project_name</span>
+  
+  <span class="ruby-identifier">issue_types</span>[<span class="ruby-string">'bug'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND type = &quot;Bug&quot;'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">issue_types</span>[<span class="ruby-string">'story'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND type = &quot;Story&quot;'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">issue_types</span>[<span class="ruby-string">'task'</span>] = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getIssuesFromJqlSearch</span>(<span class="ruby-string">'project = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">full_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; AND (fixVersion = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot; OR &quot;Release Version History&quot; = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;) AND type = &quot;Task&quot;'</span>, <span class="ruby-value">9999</span>).<span class="ruby-identifier">length</span>
+  
+  <span class="ruby-identifier">issue_types</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- issue_types-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- issue_types-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

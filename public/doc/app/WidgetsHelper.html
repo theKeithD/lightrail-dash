@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Module: WidgetsHelper</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/widgets_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-true_widget">#true_widget</a>
+    
+    <li><a href="#method-i-true_widget_listing_path">#true_widget_listing_path</a>
+    
+    <li><a href="#method-i-true_widget_path">#true_widget_path</a>
+    
+    <li><a href="#method-i-widget_type">#widget_type</a>
+    
+    <li><a href="#method-i-widgets_for_dashboard">#widgets_for_dashboard</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Extensions.html">Extensions</a>
+  
+    <li><a href="./Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+    <li><a href="./Extensions/JiraBase/InstanceMethods.html">Extensions::JiraBase::InstanceMethods</a>
+  
+    <li><a href="./Extensions/Passworded.html">Extensions::Passworded</a>
+  
+    <li><a href="./Extensions/Passworded/InstanceMethods.html">Extensions::Passworded::InstanceMethods</a>
+  
+    <li><a href="./Extensions/PrettyParam.html">Extensions::PrettyParam</a>
+  
+    <li><a href="./Extensions/PrettyParam/InstanceMethods.html">Extensions::PrettyParam::InstanceMethods</a>
+  
+    <li><a href="./Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+    <li><a href="./Extensions/WidgetBase/InstanceMethods.html">Extensions::WidgetBase::InstanceMethods</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardWidget.html">DashboardWidget</a>
+  
+    <li><a href="./DashboardWidgetsController.html">DashboardWidgetsController</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DashboardsHelper.html">DashboardsHelper</a>
+  
+    <li><a href="./GangliaGraph.html">GangliaGraph</a>
+  
+    <li><a href="./GangliaGraphsController.html">GangliaGraphsController</a>
+  
+    <li><a href="./GangliaGraphsHelper.html">GangliaGraphsHelper</a>
+  
+    <li><a href="./GithubCommit.html">GithubCommit</a>
+  
+    <li><a href="./GithubCommitsController.html">GithubCommitsController</a>
+  
+    <li><a href="./GithubCommitsHelper.html">GithubCommitsHelper</a>
+  
+    <li><a href="./HudsonBuildStatus.html">HudsonBuildStatus</a>
+  
+    <li><a href="./HudsonBuildStatusesController.html">HudsonBuildStatusesController</a>
+  
+    <li><a href="./HudsonBuildStatusesHelper.html">HudsonBuildStatusesHelper</a>
+  
+    <li><a href="./JiraCountdown.html">JiraCountdown</a>
+  
+    <li><a href="./JiraCountdownsController.html">JiraCountdownsController</a>
+  
+    <li><a href="./JiraCountdownsHelper.html">JiraCountdownsHelper</a>
+  
+    <li><a href="./JiraIssueSummariesController.html">JiraIssueSummariesController</a>
+  
+    <li><a href="./JiraIssueSummariesHelper.html">JiraIssueSummariesHelper</a>
+  
+    <li><a href="./JiraIssueSummary.html">JiraIssueSummary</a>
+  
+    <li><a href="./RemoteDataHelper.html">RemoteDataHelper</a>
+  
+    <li><a href="./SonarReport.html">SonarReport</a>
+  
+    <li><a href="./SonarReportsController.html">SonarReportsController</a>
+  
+    <li><a href="./SonarReportsHelper.html">SonarReportsHelper</a>
+  
+    <li><a href="./VerticalSpacer.html">VerticalSpacer</a>
+  
+    <li><a href="./VerticalSpacersController.html">VerticalSpacersController</a>
+  
+    <li><a href="./VerticalSpacersHelper.html">VerticalSpacersHelper</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module WidgetsHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-true_widget" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">true_widget</span><span
+            class="method-args">(widget)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get the actual widget from its appropriate model.</p>
+          
+
+          
+          <div class="method-source-code" id="true_widget-source">
+            <pre><span class="ruby-comment"># File app/helpers/widgets_helper.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">true_widget</span>(<span class="ruby-identifier">widget</span>)
+  <span class="ruby-identifier">widget_type</span>(<span class="ruby-identifier">widget</span>).<span class="ruby-identifier">get</span>(<span class="ruby-identifier">widget</span>.<span class="ruby-identifier">widgetable_id</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- true_widget-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- true_widget-method -->
+
+    
+      <div id="method-i-true_widget_listing_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">true_widget_listing_path</span><span
+            class="method-args">(widget)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return a path to a listing of the given widget’s type.</p>
+          
+
+          
+          <div class="method-source-code" id="true_widget_listing_path-source">
+            <pre><span class="ruby-comment"># File app/helpers/widgets_helper.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">true_widget_listing_path</span>(<span class="ruby-identifier">widget</span>)
+  <span class="ruby-identifier">polymorphic_path</span>(<span class="ruby-identifier">widget_type</span>(<span class="ruby-identifier">widget</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- true_widget_listing_path-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- true_widget_listing_path-method -->
+
+    
+      <div id="method-i-true_widget_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">true_widget_path</span><span
+            class="method-args">(widget, args=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a path to the given widget.</p>
+
+<p>Additional arguments will be passed to the <code>polymorphic_path</code>
+helper</p>
+          
+
+          
+          <div class="method-source-code" id="true_widget_path-source">
+            <pre><span class="ruby-comment"># File app/helpers/widgets_helper.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">true_widget_path</span>(<span class="ruby-identifier">widget</span>, <span class="ruby-identifier">args</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>
+    <span class="ruby-identifier">polymorphic_path</span>(<span class="ruby-identifier">true_widget</span>(<span class="ruby-identifier">widget</span>), <span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">polymorphic_path</span>(<span class="ruby-identifier">true_widget</span>(<span class="ruby-identifier">widget</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- true_widget_path-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- true_widget_path-method -->
+
+    
+      <div id="method-i-widget_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">widget_type</span><span
+            class="method-args">(widget)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Determine what type of widget the given <a href="Widget.html">Widget</a>
+is.</p>
+
+<p>Returned value is a constant, so the following is possible:
+<code>widget_type(widget).get(35)</code></p>
+          
+
+          
+          <div class="method-source-code" id="widget_type-source">
+            <pre><span class="ruby-comment"># File app/helpers/widgets_helper.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">widget_type</span>(<span class="ruby-identifier">widget</span>)
+  <span class="ruby-identifier">widget</span>.<span class="ruby-identifier">widgetable_type</span>.<span class="ruby-identifier">pluralize</span>.<span class="ruby-identifier">classify</span>.<span class="ruby-identifier">constantize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- widget_type-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- widget_type-method -->
+
+    
+      <div id="method-i-widgets_for_dashboard" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">widgets_for_dashboard</span><span
+            class="method-args">(dashboard)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gather an array of Widgets that belong to a given <a
+href="Dashboard.html">Dashboard</a>. Each item in the array is a hash
+containing values for <code>widget</code> and <code>column</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="widgets_for_dashboard-source">
+            <pre><span class="ruby-comment"># File app/helpers/widgets_helper.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">widgets_for_dashboard</span>(<span class="ruby-identifier">dashboard</span>)
+  <span class="ruby-identifier">widgets</span> = <span class="ruby-constant">Array</span>[];
+  <span class="ruby-identifier">dashboard_widgets</span> = <span class="ruby-constant">Array</span>(<span class="ruby-constant">DashboardWidget</span>.<span class="ruby-identifier">all</span>(<span class="ruby-value">:dashboard_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dashboard</span>.<span class="ruby-identifier">id</span>))
+  <span class="ruby-identifier">dashboard_widgets</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dashboard_widget</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">widgets</span>.<span class="ruby-identifier">push</span>({<span class="ruby-string">&quot;widget&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Widget</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">dashboard_widget</span>.<span class="ruby-identifier">widget_id</span>), <span class="ruby-string">&quot;column&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dashboard_widget</span>.<span class="ruby-identifier">column_id</span>})
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">widgets</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- widgets_for_dashboard-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- widgets_for_dashboard-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

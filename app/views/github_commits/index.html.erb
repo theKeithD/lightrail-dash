@@ -1,0 +1,39 @@
+<h1>Listing github_commits</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Github username</th>
+    <th>Track user watchlist</th>
+    <th>Commits to show</th>
+    <th>Github repository</th>
+    <th>Branch</th>
+    <th>Private feed</th>
+    <th>Auth login</th>
+    <th>Auth token</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @github_commits.each do |github_commit| %>
+  <tr>
+    <td><%= github_commit.name %></td>
+    <td><%= github_commit.github_username %></td>
+    <td><%= github_commit.track_user_watchlist %></td>
+    <td><%= github_commit.commits_to_show %></td>
+    <td><%= github_commit.github_repository %></td>
+    <td><%= github_commit.branch %></td>
+    <td><%= github_commit.private_feed %></td>
+    <td><%= github_commit.auth_login %></td>
+    <td><%= github_commit.auth_token %></td>
+    <td><%= link_to 'Show', github_commit %></td>
+    <td><%= link_to 'Edit', edit_github_commit_path(github_commit) %></td>
+    <td><%= link_to 'Destroy', github_commit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Github commit', new_github_commit_path %>

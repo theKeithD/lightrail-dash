@@ -1,0 +1,32 @@
+<h1>Listing jira_issue_summaries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>JIRA Server</th>
+    <th>Project</th>
+    <th>Version</th>
+    <th>Username</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@jira_issue_summaries).each do |jira_issue_summary| %>
+  <tr>
+    <td><%= jira_issue_summary.name %></td>
+    <td><%= jira_issue_summary.jira_server %></td>
+    <td><%= jira_issue_summary.project %></td>
+    <td><%= jira_issue_summary.version %></td>
+    <td><%= jira_issue_summary.username %></td>
+    <td><%= link_to 'Show', jira_issue_summary %></td>
+    <td><%= link_to 'Edit', edit_jira_issue_summary_path(jira_issue_summary) %></td>
+    <td><%= link_to 'Destroy', jira_issue_summary, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Jira issue summary', new_jira_issue_summary_path %>

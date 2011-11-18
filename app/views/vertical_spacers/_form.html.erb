@@ -1,0 +1,25 @@
+<%= form_for(@vertical_spacer) do |f| %>
+  <% if @vertical_spacer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vertical_spacer.errors.count, "error") %> prohibited this vertical_spacer from being saved:</h2>
+
+      <ul>
+      <% @vertical_spacer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

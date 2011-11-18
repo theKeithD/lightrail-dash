@@ -1,0 +1,2 @@
+<% target_element = params[:targetElement]? params[:targetElement] : 'main-content' %>
+<%= render :partial => @widget, :locals => { :target_element => target_element } %>

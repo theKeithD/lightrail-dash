@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Widgetable ID:</b>
+  <%= @widget.widgetable_id %>
+</p>
+<p>
+  <b>Widgetable Type:</b>
+  <%= @widget.widgetable_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_widget_path(@widget) %> |
+<%= link_to 'Back', widgets_path %>

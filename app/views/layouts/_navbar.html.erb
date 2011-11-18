@@ -1,0 +1,7 @@
+        <div id='nav'>
+        <% for dashboard in Dashboard.displayable_dashboards %>
+            <%= link_to_unless_current dashboard.name, dashboard, :id => 'nav-' + ActiveSupport::Inflector.parameterize(dashboard.name)  do 
+              link_to dashboard.name, dashboard, { :id => 'nav-' + ActiveSupport::Inflector.parameterize(dashboard.name), :class => 'curPage' }
+            end %>
+        <% end %>
+        </div>

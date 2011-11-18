@@ -1,0 +1,8 @@
+.bundle
+.DS_Store
+.sass-cache/
+*.pid
+db/*.sqlite3
+log/*.log
+public/assets
+tmp/**/*

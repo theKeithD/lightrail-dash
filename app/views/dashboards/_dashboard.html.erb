@@ -1,0 +1,31 @@
+<%= javascript_include_tag 'widgets/widget' %>
+<% widgets = widgets_for_dashboard(dashboard) %>
+
+<% columns = Array.new() %>
+<% dashboard.columns.times do %>
+<%  columns.push(Array.new()) %>
+<% end -%>
+
+<%# Populate the arrays within the columns array. %>
+<% widgets.each_with_index do |widget_item, index| %>
+  <% columns[widget_item["column"] - 1].push(widget_item["widget"]) %>
+<% end -%>
+
+<%# Determine column width, generate columns, render each column's widgets. %>
+<% column_width = 99.0 / columns.length %>
+<% columns.each_with_index do |column_items, column| %>
+<div id='<%= "dashboard-#{dashboard.id}-column-#{column + 1}" %>' class='dashboard-column' style='width: <%= column_width %>%;'>
+<%   column_items.each_with_index do |widget, index| %>
+<%     widget_div_id = "dashboard-#{dashboard.id}-column-#{column + 1}-row-#{index + 1}-widget-#{widget.id}" %>
+<%     widget_div_class = true_widget(widget).html_class %>
+  <div id='<%= widget_div_id %>' class='widget-view <%= widget_div_class %>'>
+    <% if(!(widget.widgetable_type =~ /spacer$/)) -%>
+    <div class='widget-loading-info'>Loading <%= "#{widget.widgetable_type.titleize} - #{true_widget(widget).name}" %>...</div>
+    <div id='<%= "#{widget_div_id}-overlay" %>' class='widget-control-overlay'>
+      <div class='widget-refresh' title="Refresh this <%= widget.widgetable_type.titleize %> widget"></div>
+    </div>
+    <% end -%>
+  </div>
+<%   end %>
+</div>
+<% end %>

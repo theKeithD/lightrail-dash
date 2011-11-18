@@ -1,0 +1,62 @@
+<div id='github-commit-view' class='widget-view github-commit'>
+    <%= render :partial => @github_commit, :locals => { :target_element => 'github-commit-view' } %>
+</div>
+
+<div id='github-commit-info' class='widget-info github-commit'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @github_commit.name %>
+    </p>
+
+    <p>
+      <b>Github username:</b>
+      <%= @github_commit.github_username %>
+    </p>
+
+    <p>
+      <b>Track user watchlist:</b>
+      <%= @github_commit.track_user_watchlist %>
+    </p>
+    
+    <p>
+      <b>Github repository:</b>
+      <%= @github_commit.github_repository %>
+    </p>
+
+    <p>
+      <b>Branch:</b>
+      <%= @github_commit.branch %>
+    </p>
+
+    <p>
+      <b>Commits to show:</b>
+      <%= @github_commit.commits_to_show %>
+    </p>
+
+    <p>
+      <b>Private feed:</b>
+      <%= @github_commit.private_feed %>
+    </p>
+
+    <p>
+      <b>Auth login:</b>
+      <%= @github_commit.auth_login %>
+    </p>
+
+    <p>
+      <b>Auth token:</b>
+      <%= @github_commit.auth_token %>
+    </p>
+
+    <p>
+        <b>Feed URI:</b>
+        <a href='<%= @github_commit.feed_uri %>'><%= @github_commit.feed_uri %></a>
+    </p>
+    
+    <div id='github-commit-controls' class='widget-info-controls github-commit'>
+        <%= link_to 'Edit', edit_github_commit_path(@github_commit) %> |
+        <%= link_to 'Back', github_commits_path %>
+    </div>
+</div>

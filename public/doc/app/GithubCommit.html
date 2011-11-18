@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: GithubCommit</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/github_commit.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+  
+  
+    <li><a class="include" href="RemoteDataHelper.html">RemoteDataHelper</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-codebase_uri">#codebase_uri</a>
+    
+    <li><a href="#method-i-feed_uri">#feed_uri</a>
+    
+    <li><a href="#method-i-recent_commits">#recent_commits</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Extensions.html">Extensions</a>
+  
+    <li><a href="./Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+    <li><a href="./Extensions/JiraBase/InstanceMethods.html">Extensions::JiraBase::InstanceMethods</a>
+  
+    <li><a href="./Extensions/Passworded.html">Extensions::Passworded</a>
+  
+    <li><a href="./Extensions/Passworded/InstanceMethods.html">Extensions::Passworded::InstanceMethods</a>
+  
+    <li><a href="./Extensions/PrettyParam.html">Extensions::PrettyParam</a>
+  
+    <li><a href="./Extensions/PrettyParam/InstanceMethods.html">Extensions::PrettyParam::InstanceMethods</a>
+  
+    <li><a href="./Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+    <li><a href="./Extensions/WidgetBase/InstanceMethods.html">Extensions::WidgetBase::InstanceMethods</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardWidget.html">DashboardWidget</a>
+  
+    <li><a href="./DashboardWidgetsController.html">DashboardWidgetsController</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DashboardsHelper.html">DashboardsHelper</a>
+  
+    <li><a href="./GangliaGraph.html">GangliaGraph</a>
+  
+    <li><a href="./GangliaGraphsController.html">GangliaGraphsController</a>
+  
+    <li><a href="./GangliaGraphsHelper.html">GangliaGraphsHelper</a>
+  
+    <li><a href="./GithubCommit.html">GithubCommit</a>
+  
+    <li><a href="./GithubCommitsController.html">GithubCommitsController</a>
+  
+    <li><a href="./GithubCommitsHelper.html">GithubCommitsHelper</a>
+  
+    <li><a href="./HudsonBuildStatus.html">HudsonBuildStatus</a>
+  
+    <li><a href="./HudsonBuildStatusesController.html">HudsonBuildStatusesController</a>
+  
+    <li><a href="./HudsonBuildStatusesHelper.html">HudsonBuildStatusesHelper</a>
+  
+    <li><a href="./JiraCountdown.html">JiraCountdown</a>
+  
+    <li><a href="./JiraCountdownsController.html">JiraCountdownsController</a>
+  
+    <li><a href="./JiraCountdownsHelper.html">JiraCountdownsHelper</a>
+  
+    <li><a href="./JiraIssueSummariesController.html">JiraIssueSummariesController</a>
+  
+    <li><a href="./JiraIssueSummariesHelper.html">JiraIssueSummariesHelper</a>
+  
+    <li><a href="./JiraIssueSummary.html">JiraIssueSummary</a>
+  
+    <li><a href="./RemoteDataHelper.html">RemoteDataHelper</a>
+  
+    <li><a href="./SonarReport.html">SonarReport</a>
+  
+    <li><a href="./SonarReportsController.html">SonarReportsController</a>
+  
+    <li><a href="./SonarReportsHelper.html">SonarReportsHelper</a>
+  
+    <li><a href="./VerticalSpacer.html">VerticalSpacer</a>
+  
+    <li><a href="./VerticalSpacersController.html">VerticalSpacersController</a>
+  
+    <li><a href="./VerticalSpacersHelper.html">VerticalSpacersHelper</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class GithubCommit</h1>
+
+  <div id="description" class="description">
+    
+<p>Model for retrieving the latest commits from GitHub, either from a user’s
+watchlist or from a specific repository branch.</p>
+
+<p>Based on <a href="Extensions/WidgetBase.html">Extensions::WidgetBase</a>,
+which gives it a <code>name</code> property, as well as the
+<code>html_id</code> and <code>html_class</code> virtual properties. This
+is a kind of <a href="Widget.html">Widget</a>.</p>
+
+<h2 id="label-Unique+Properties">Unique Properties</h2>
+<ul><li>
+<p><code>github_username</code> (String) - Name of a user or organization on
+GitHub that owns the desired repository. Required property.</p>
+</li><li>
+<p><code>track_user_watchlist</code> (Boolean) - Whether or not to retrieve
+data from a GitHub user's personal feed. If this is enabled, only
+<code>github_username</code> and potentially <code>auth_token</code> are
+required. Default is <code>false</code>. Required property.</p>
+</li><li>
+<p><code>github_repository</code> (String) - Name of the repository to track.
+Required property if :track_user_watchlist is <code>false</code>.</p>
+</li><li>
+<p><code>branch</code> (String) - Name of the branch to track. Default is
+"<code>master</code>". Required property if :track_user_watchlist is
+<code>false</code>.</p>
+</li><li>
+<p><code>commits_to_show</code> (Integer) - Number of recent commits to show.
+Default is <code>5</code>. Required property.</p>
+</li><li>
+<p><code>private_feed</code> (Boolean) - Whether or not
+<code>github_repository</code> is private or not. If it is,
+<code>auth_login</code> and <code>auth_token</code> must also be provided.
+Default is <code>true</code>. Required property.</p>
+</li><li>
+<p><code>auth_login</code> (String) - The username of a GitHub user authorized
+to view this repository. Required property if <code>private_feed</code> is
+<code>true</code>.</p>
+</li><li>
+<p><code>auth_token</code> (Text) - An authorization token for a GitHub user
+authorized to view this repository. Your token can be found at <a
+href="https://github.com/account/admin">github.com/account/admin</a> under
+the <strong>API Token</strong> section. Required property if
+<code>private_feed</code> is <code>true</code>.</p>
+</li></ul>
+
+<h2 id="label-Virtual+Properties">Virtual Properties</h2>
+<ul><li>
+<p><code>feed_uri</code> (String) - URI of the Atom feed used by <a
+href="GithubCommit.html">GithubCommit</a>. Combines the values of all of
+other properties appropriately.</p>
+</li><li>
+<p><code>codebase_uri</code> (String) - URI of the GitHub page that holds this
+branch's code, or if <code>track_user_watchlist</code> is
+<code>true</code>, the user's profile.</p>
+</li><li>
+<p><code>recent_commits</code> (Array) - Hashes of recent commits, limited by
+<code>commits_to_show</code>.</p>
+</li></ul>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-codebase_uri" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">codebase_uri</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>URI of the GitHub page that holds this branch’s code, or if
+<code>track_user_watchlist</code> is <code>true</code>, the user’s profile.</p>
+          
+
+          
+          <div class="method-source-code" id="codebase_uri-source">
+            <pre><span class="ruby-comment"># File app/models/github_commit.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">codebase_uri</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">track_user_watchlist?</span>)
+      <span class="ruby-node">&quot;http://github.com/#{self.github_username}&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-node">&quot;https://www.github.com/#{self.github_username}/#{self.github_repository}/tree/#{self.branch}&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- codebase_uri-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- codebase_uri-method -->
+
+    
+      <div id="method-i-feed_uri" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">feed_uri</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>URI of the Atom feed used by <a href="GithubCommit.html">GithubCommit</a>.
+Combines the values of all of other properties appropriately.</p>
+          
+
+          
+          <div class="method-source-code" id="feed_uri-source">
+            <pre><span class="ruby-comment"># File app/models/github_commit.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feed_uri</span>
+  <span class="ruby-identifier">extra_parameters</span> = <span class="ruby-string">&quot;&quot;</span>
+  
+  <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">private_feed?</span>)
+    <span class="ruby-identifier">extra_parameters</span> = <span class="ruby-string">&quot;?&quot;</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">track_user_watchlist?</span>)
+      <span class="ruby-identifier">extra_parameters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;login=#{self.auth_login}&amp;&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">extra_parameters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;token=#{self.auth_token}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">track_user_watchlist?</span>)
+    <span class="ruby-node">&quot;https://www.github.com/#{self.github_username}.#{self.private_feed ? 'private.' : '' }atom&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">extra_parameters</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-node">&quot;https://www.github.com/#{self.github_username}/#{self.github_repository}/commits/#{self.branch}.atom&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">extra_parameters</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- feed_uri-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- feed_uri-method -->
+
+    
+      <div id="method-i-recent_commits" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">recent_commits</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>An array of recent commits, limited by <code>commits_to_show</code>. Each
+commit is stored as a hash with <code>id</code>, <code>description</code>,
+<code>uri</code>, <code>date</code>, and <code>author</code> as keys.</p>
+          
+
+          
+          <div class="method-source-code" id="recent_commits-source">
+            <pre><span class="ruby-comment"># File app/models/github_commit.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">recent_commits</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'nokogiri'</span>
+  
+  <span class="ruby-identifier">feed</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">remote_xml</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">feed_uri</span>))
+
+  <span class="ruby-identifier">namespaces</span> = {<span class="ruby-string">&quot;atom&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;http://www.w3.org/2005/Atom&quot;</span>}
+  <span class="ruby-identifier">xpath_query</span> = <span class="ruby-node">&quot;//atom:entry[position()&lt;#{self.commits_to_show + 1}]&quot;</span>
+  
+  <span class="ruby-identifier">commits</span> = <span class="ruby-identifier">feed</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-identifier">xpath_query</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+    {<span class="ruby-string">'id'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">'atom:link'</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">first</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">last</span>,
+     <span class="ruby-string">'description'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">'atom:title'</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">inner_text</span>, 
+     <span class="ruby-string">'uri'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">'atom:link'</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">first</span>[<span class="ruby-string">'href'</span>],
+     <span class="ruby-string">'date'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">'atom:updated'</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">inner_text</span>, 
+     <span class="ruby-string">'author'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">xpath</span>(<span class="ruby-string">'atom:author/atom:name'</span>, <span class="ruby-identifier">namespaces</span>).<span class="ruby-identifier">inner_text</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- recent_commits-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- recent_commits-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,28 @@
+<div id='sonar-report-view' class='widget-view sonar-report'>
+    <%= render :partial => @sonar_report, :locals => { :target_element => 'sonar-report-view' } %>
+</div>
+<div id='sonar-report-info' class='widget-info sonar-report'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @sonar_report.name %>
+    </p>
+    <p>
+      <b>Package name:</b>
+      <%= @sonar_report.package_name %>
+    </p>
+    <p>
+      <b>Metrics to track:</b>
+      <%= @sonar_report.metrics_to_track %>
+    </p>
+    <p>
+      <b>Sonar server:</b>
+      <a href='<%= @sonar_report.sonar_server %>'><%= @sonar_report.sonar_server %></a>
+    </p>
+
+    <div id='sonar-report-controls' class='widget-info-controls sonar-report'>
+        <%= link_to 'Edit', edit_sonar_report_path(@sonar_report) %> |
+        <%= link_to 'Back', sonar_reports_path %>
+    </div>
+</div>

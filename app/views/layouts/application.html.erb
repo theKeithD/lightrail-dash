@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= page_title %></title>
+  <%= stylesheet_link_tag 'dashboard', :media => 'screen' %>
+  <%= javascript_include_tag 'jquery.min' %>
+  <%= javascript_include_tag 'jquery.livequery', 'jquery.json', 'jquery.timers-1.2' %>
+  <%= javascript_include_tag 'dashboard-clock' %>
+  <% if controller_name == 'application' %>
+  <%= javascript_include_tag 'jquery.jkey-1.2', 'autorotate' %>
+  <% end %>
+  <%= javascript_include_tag 'flot/jquery.flot', 'flot/jquery.flot.stack' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+    <div id='top-gradient'></div>
+    <div id='page-wrapper'>
+        <div id='header-title'><a href='<%= root_path %>'><%= page_title %></a></div>
+<%= render 'layouts/navbar' %>
+        <div id='main-content-wrapper'>
+            <div id='main-content-gradient'></div>
+            <div id='main-content'>
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+    <% if controller_name == 'application' %>
+    <div id='cycle-container'><div id='cycle-button' tabindex='0'></div></div>
+    <% end %>
+    <div id="dashboard-clock">
+        <div id='clock-date'><span id='clock-month'>00</span>/<span id='clock-day'>00</span>/<span id='clock-year'>0000</span></div>
+        <div id='clock-time'><span id='clock-hour'>00</span>:<span id='clock-minute'>00</span>:<span id='clock-second'>00</span> <span id='clock-ampm'>--</span></div>
+    </div>
+</body>
+</html>

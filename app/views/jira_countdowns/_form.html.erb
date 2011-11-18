@@ -1,0 +1,41 @@
+<%= form_for(@jira_countdown) do |f| %>
+  <% if @jira_countdown.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jira_countdown.errors.count, "error") %> prohibited this jira_countdown from being saved:</h2>
+
+      <ul>
+      <% @jira_countdown.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :jira_server %><br />
+    <%= f.text_field :jira_server %>
+  </div>
+  <div class="field">
+    <%= f.label :project %><br />
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

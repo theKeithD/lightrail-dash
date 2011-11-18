@@ -1,0 +1,30 @@
+<h1>Listing Ganglia graphs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>URI</th>
+    <th>Kind</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@ganglia_graphs).each do |ganglia_graph| %>
+  <tr>
+    <td><%= ganglia_graph.name %></td>
+    <td><%= ganglia_graph.uri %></td>
+    <td><%= ganglia_graph.kind %></td>
+    <td><%= ganglia_graph.description %></td>
+    <td><%= link_to 'Show', ganglia_graph %></td>
+    <td><%= link_to 'Edit', edit_ganglia_graph_path(ganglia_graph) %></td>
+    <td><%= link_to 'Destroy', ganglia_graph, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ganglia Graph', new_ganglia_graph_path %>

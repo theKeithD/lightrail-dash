@@ -1,0 +1,53 @@
+<%= form_for(@github_commit) do |f| %>
+  <% if @github_commit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@github_commit.errors.count, "error") %> prohibited this github_commit from being saved:</h2>
+
+      <ul>
+      <% @github_commit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :github_username %><br />
+    <%= f.text_field :github_username %>
+  </div>
+  <div class="field">
+    <%= f.label :track_user_watchlist %><br />
+    <%= f.check_box :track_user_watchlist %>
+  </div>
+  <div class="field">
+    <%= f.label :github_repository %><br />
+    <%= f.text_field :github_repository %>
+  </div>
+  <div class="field">
+    <%= f.label :branch %><br />
+    <%= f.text_field :branch %>
+  </div>
+  <div class="field">
+    <%= f.label :commits_to_show %><br />
+    <%= f.text_field :commits_to_show %>
+  </div>
+  <div class="field">
+    <%= f.label :private_feed %><br />
+    <%= f.check_box :private_feed %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_login %><br />
+    <%= f.text_field :auth_login %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_token %><br />
+    <%= f.text_field :auth_token %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

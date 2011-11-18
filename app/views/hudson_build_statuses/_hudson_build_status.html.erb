@@ -1,0 +1,16 @@
+<%= javascript_tag do -%>
+$.ajax({
+  url: '<%= asset_path 'widgets/hudson_build_status' %>',
+  cache: true,
+  dataType: "script",
+  success: function() {
+    var hudsonBuildStatus = <%= raw hudson_build_status.to_json(:methods => [:html_id, :html_class, :api_uri]) %>;
+    var apiData = <%= raw api_data(hudson_build_status).to_json %>;
+    
+    addHudsonBuildStatusToPage(hudsonBuildStatus<%= if(defined? target_element)
+        ", $('\##{target_element}')"
+        end -%>);
+    setUpHudsonBuildStatus(hudsonBuildStatus, apiData);
+  }
+});
+<% end -%> 

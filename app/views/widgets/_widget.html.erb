@@ -1,0 +1,11 @@
+<% widget_locals = Hash.new() %>
+<% if defined? target_element %>
+<% widget_locals[:target_element] = target_element %>
+<% end %>
+<%= render :partial => true_widget(widget), :locals => widget_locals %>
+
+<% if(!(widget.widgetable_type =~ /spacer$/)) -%>
+<div <% if defined? target_element %><%=   "id='#{target_element}-overlay'" %><% end %> class='widget-control-overlay'>
+    <div class='widget-refresh' title="Refresh this <%= widget.widgetable_type.titleize %> widget"></div>
+</div>
+<% end -%>

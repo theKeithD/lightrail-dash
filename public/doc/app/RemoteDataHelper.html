@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Module: RemoteDataHelper</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/remote_data_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-remote">#remote</a>
+    
+    <li><a href="#method-i-remote_json">#remote_json</a>
+    
+    <li><a href="#method-i-remote_xml">#remote_xml</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Extensions.html">Extensions</a>
+  
+    <li><a href="./Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+    <li><a href="./Extensions/JiraBase/InstanceMethods.html">Extensions::JiraBase::InstanceMethods</a>
+  
+    <li><a href="./Extensions/Passworded.html">Extensions::Passworded</a>
+  
+    <li><a href="./Extensions/Passworded/InstanceMethods.html">Extensions::Passworded::InstanceMethods</a>
+  
+    <li><a href="./Extensions/PrettyParam.html">Extensions::PrettyParam</a>
+  
+    <li><a href="./Extensions/PrettyParam/InstanceMethods.html">Extensions::PrettyParam::InstanceMethods</a>
+  
+    <li><a href="./Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+    <li><a href="./Extensions/WidgetBase/InstanceMethods.html">Extensions::WidgetBase::InstanceMethods</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Dashboard.html">Dashboard</a>
+  
+    <li><a href="./DashboardWidget.html">DashboardWidget</a>
+  
+    <li><a href="./DashboardWidgetsController.html">DashboardWidgetsController</a>
+  
+    <li><a href="./DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="./DashboardsHelper.html">DashboardsHelper</a>
+  
+    <li><a href="./GangliaGraph.html">GangliaGraph</a>
+  
+    <li><a href="./GangliaGraphsController.html">GangliaGraphsController</a>
+  
+    <li><a href="./GangliaGraphsHelper.html">GangliaGraphsHelper</a>
+  
+    <li><a href="./GithubCommit.html">GithubCommit</a>
+  
+    <li><a href="./GithubCommitsController.html">GithubCommitsController</a>
+  
+    <li><a href="./GithubCommitsHelper.html">GithubCommitsHelper</a>
+  
+    <li><a href="./HudsonBuildStatus.html">HudsonBuildStatus</a>
+  
+    <li><a href="./HudsonBuildStatusesController.html">HudsonBuildStatusesController</a>
+  
+    <li><a href="./HudsonBuildStatusesHelper.html">HudsonBuildStatusesHelper</a>
+  
+    <li><a href="./JiraCountdown.html">JiraCountdown</a>
+  
+    <li><a href="./JiraCountdownsController.html">JiraCountdownsController</a>
+  
+    <li><a href="./JiraCountdownsHelper.html">JiraCountdownsHelper</a>
+  
+    <li><a href="./JiraIssueSummariesController.html">JiraIssueSummariesController</a>
+  
+    <li><a href="./JiraIssueSummariesHelper.html">JiraIssueSummariesHelper</a>
+  
+    <li><a href="./JiraIssueSummary.html">JiraIssueSummary</a>
+  
+    <li><a href="./RemoteDataHelper.html">RemoteDataHelper</a>
+  
+    <li><a href="./SonarReport.html">SonarReport</a>
+  
+    <li><a href="./SonarReportsController.html">SonarReportsController</a>
+  
+    <li><a href="./SonarReportsHelper.html">SonarReportsHelper</a>
+  
+    <li><a href="./VerticalSpacer.html">VerticalSpacer</a>
+  
+    <li><a href="./VerticalSpacersController.html">VerticalSpacersController</a>
+  
+    <li><a href="./VerticalSpacersHelper.html">VerticalSpacersHelper</a>
+  
+    <li><a href="./Widget.html">Widget</a>
+  
+    <li><a href="./WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="./WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module RemoteDataHelper</h1>
+
+  <div id="description" class="description">
+    
+<p>Helper methods for retrieving data from remote sources.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remote</span><span
+            class="method-args">(content_type, url, limit = 10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fetch data from a remote source using the specified content type, following
+redirects if needed. Supports HTTP and HTTPS. Tested with <code>json</code>
+and <code>xml</code> for <code>content_type</code>.</p>
+          
+
+          
+          <div class="method-source-code" id="remote-source">
+            <pre><span class="ruby-comment"># File lib/remote_data_helper.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remote</span>(<span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-value">10</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'net/http'</span>
+      <span class="ruby-identifier">require</span> <span class="ruby-string">'net/https'</span>
+      <span class="ruby-identifier">require</span> <span class="ruby-string">'uri'</span>
+      
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Max redirect limit reached&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+        <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;https&quot;</span>
+          <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span> = <span class="ruby-keyword">true</span> 
+              <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">request</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span><span class="ruby-operator">::</span><span class="ruby-constant">Get</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">request_uri</span>)
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request</span>(<span class="ruby-identifier">request</span>)
+        
+        <span class="ruby-comment"># follow redirects</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">response</span>
+          <span class="ruby-keyword">when</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPSuccess</span>              <span class="ruby-keyword">then</span> <span class="ruby-identifier">data</span> = <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>
+              <span class="ruby-keyword">when</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPRedirection</span>     <span class="ruby-keyword">then</span> <span class="ruby-identifier">data</span> = <span class="ruby-identifier">remote</span>(<span class="ruby-identifier">content_type</span>, <span class="ruby-identifier">response</span>.<span class="ruby-identifier">header</span>[<span class="ruby-string">'location'</span>], <span class="ruby-identifier">limit</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">response</span>.<span class="ruby-identifier">error!</span>
+        <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">data</span> = { <span class="ruby-string">&quot;response&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;error&quot;</span> }.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;to_#{content_type}&quot;</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remote-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remote-method -->
+
+    
+      <div id="method-i-remote_json" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remote_json</span><span
+            class="method-args">(url, limit = 10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fetch JSON from a remote source. Wrapper around remote().</p>
+
+<p>Handy for certain applications that serve JSON data but do not support
+JSONP callbacks.</p>
+          
+
+          
+          <div class="method-source-code" id="remote_json-source">
+            <pre><span class="ruby-comment"># File lib/remote_data_helper.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remote_json</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-value">10</span>)
+      <span class="ruby-identifier">remote</span>(<span class="ruby-string">&quot;json&quot;</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">limit</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remote_json-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remote_json-method -->
+
+    
+      <div id="method-i-remote_xml" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remote_xml</span><span
+            class="method-args">(url, limit = 10)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fetch XML from a remote source. Wrapper around remote().</p>
+          
+
+          
+          <div class="method-source-code" id="remote_xml-source">
+            <pre><span class="ruby-comment"># File lib/remote_data_helper.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remote_xml</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">limit</span> = <span class="ruby-value">10</span>)
+  <span class="ruby-identifier">remote</span>(<span class="ruby-string">&quot;xml&quot;</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">limit</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remote_xml-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remote_xml-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

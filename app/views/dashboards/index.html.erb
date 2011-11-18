@@ -1,0 +1,24 @@
+<h1>Listing dashboards</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@dashboards).each do |dashboard| %>
+  <tr>
+    <td><%= dashboard.name %></td>
+    <td><%= link_to 'Show', dashboard %></td>
+    <td><%= link_to 'Edit', edit_dashboard_path(dashboard) %></td>
+    <td><%= link_to 'Destroy', dashboard, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dashboard', new_dashboard_path %>

@@ -1,0 +1,30 @@
+<h1>Listing sonar_reports</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Package name</th>
+    <th>Metrics to track</th>
+    <th>Sonar server</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@sonar_reports).each do |sonar_report| %>
+  <tr>
+    <td><%= sonar_report.name %></td>
+    <td><%= sonar_report.package_name %></td>
+    <td><%= sonar_report.metrics_to_track %></td>
+    <td><%= sonar_report.sonar_server %></td>
+    <td><%= link_to 'Show', sonar_report %></td>
+    <td><%= link_to 'Edit', edit_sonar_report_path(sonar_report) %></td>
+    <td><%= link_to 'Destroy', sonar_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sonar report', new_sonar_report_path %>

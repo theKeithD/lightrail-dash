@@ -1,0 +1,18 @@
+<div id='github-commit-<%= github_commit.id %>' class='github-commit-title'>
+    Last <span class='github-commit-limit'><%= github_commit.commits_to_show %></span> commits <% if(github_commit.track_user_watchlist?) -%>
+      from <a href='<%= github_commit.codebase_uri%>'><span class='github-commit-username'><%= github_commit.github_username %></span>'s watchlist</a>
+    <% else -%>
+      for <a href='<%= github_commit.codebase_uri%>'><span class='github-commit-repo'><%= github_commit.github_repository %></span> - <span class='github-commit-branch'><%= github_commit.branch %></span></a>
+    <% end -%>
+</div>
+<% github_commit.recent_commits.each do |commit| %>
+<a href='<%= commit["uri"] %>' id='github-commit-<%= commit["id"]%>' class='github-commit-item'>
+    <div class='commit-item-title'>
+        <span class='commit-description'><%= commit["description"] %></span>
+    </div>
+    <% commit_time = Time.strptime(commit["date"], "%Y-%m-%dT%H:%M:%S%z") %>
+    <div class='commit-item-byline'>
+        <% if(!github_commit.track_user_watchlist?) -%>commited by <span class='commit-author'><%= commit["author"] %></span><% end -%> <span class='commit-date' <% if(github_commit.track_user_watchlist?) -%>style='position: static;'<% end -%>title='<%= commit_time %>'><%= "#{time_ago_in_words commit_time} ago" %></span>
+    </div>
+</a>
+<% end -%>

@@ -1,0 +1,31 @@
+<h1>Listing hudson_build_statuses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Hudson server</th>
+    <th>Build</th>
+    <th>Show overall status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@hudson_build_statuses).each do |hudson_build_status| %>
+  <tr>
+    <td><%= hudson_build_status.name %></td>
+    <td><a href='<%= hudson_build_status.hudson_server %>'><%= hudson_build_status.hudson_server %></a>
+</td>
+    <td><%= hudson_build_status.build %></td>
+    <td><%= hudson_build_status.show_overall_status %></td>
+    <td><%= link_to 'Show', hudson_build_status %></td>
+    <td><%= link_to 'Edit', edit_hudson_build_status_path(hudson_build_status) %></td>
+    <td><%= link_to 'Destroy', hudson_build_status, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hudson build status', new_hudson_build_status_path %>

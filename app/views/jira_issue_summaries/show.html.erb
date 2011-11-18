@@ -1,0 +1,48 @@
+<div id='jira-issue-summary-view' class='widget-view jira-issue-summary'>
+    <%= render :partial => @jira_issue_summary, :locals => { :target_element => 'jira-issue-summary-view' } %>
+</div>
+<div id='jira-issue-summary-info' class='widget-info jira-issue-summary'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @jira_issue_summary.name %>
+    </p>
+    <p>
+      <b>JIRA server:</b>
+      <a href='<%= @jira_issue_summary.jira_server %>'><%= @jira_issue_summary.jira_server %></a>
+    </p>
+    <p>
+      <b>Project:</b>
+      <%= @jira_issue_summary.project %>
+    </p>
+    <p>
+      <b>Full Project Name:</b>
+      <%= @jira_issue_summary.full_project_name %>
+    </p>
+    <p>
+      <b>Version:</b>
+      <%= @jira_issue_summary.version %>
+    </p>
+    <p>
+      <b>Statuses - Open:</b>
+      <%= @jira_issue_summary.statuses_open %>
+    </p>
+    <p>
+      <b>Statuses - In Progress:</b>
+      <%= @jira_issue_summary.statuses_in_progress %>
+    </p>
+    <p>
+      <b>Statuses - Closed:</b>
+      <%= @jira_issue_summary.statuses_closed %>
+    </p>
+    <p>
+      <b>Username:</b>
+      <%= @jira_issue_summary.username %>
+    </p>
+
+    <div id='jira-issue-summary-controls' class='widget-info-controls jira-issue-summary'>
+        <%= link_to 'Edit', edit_jira_issue_summary_path(@jira_issue_summary) %> |
+        <%= link_to 'Back', jira_issue_summaries_path %>
+    </div>
+</div>

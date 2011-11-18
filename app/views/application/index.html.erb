@@ -1,0 +1,5 @@
+<% Dashboard.displayable_dashboards.each do |dashboard| %>
+<div style='display: none' id='dashboard-<%= dashboard.id %>' class='autorotate dashboard'>
+  <%= render dashboard %>
+</div>
+<% end %>

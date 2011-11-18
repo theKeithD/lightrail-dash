@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Module: Extensions::JiraBase::InstanceMethods</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/extensions/jira_base.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-full_project_name">#full_project_name</a>
+    
+    <li><a href="#method-i-login">#login</a>
+    
+    <li><a href="#method-i-next_release">#next_release</a>
+    
+    <li><a href="#method-i-true_version">#true_version</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Extensions.html">Extensions</a>
+  
+    <li><a href="../../Extensions/JiraBase.html">Extensions::JiraBase</a>
+  
+    <li><a href="../../Extensions/JiraBase/InstanceMethods.html">Extensions::JiraBase::InstanceMethods</a>
+  
+    <li><a href="../../Extensions/Passworded.html">Extensions::Passworded</a>
+  
+    <li><a href="../../Extensions/Passworded/InstanceMethods.html">Extensions::Passworded::InstanceMethods</a>
+  
+    <li><a href="../../Extensions/PrettyParam.html">Extensions::PrettyParam</a>
+  
+    <li><a href="../../Extensions/PrettyParam/InstanceMethods.html">Extensions::PrettyParam::InstanceMethods</a>
+  
+    <li><a href="../../Extensions/WidgetBase.html">Extensions::WidgetBase</a>
+  
+    <li><a href="../../Extensions/WidgetBase/InstanceMethods.html">Extensions::WidgetBase::InstanceMethods</a>
+  
+    <li><a href="../../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../../Dashboard.html">Dashboard</a>
+  
+    <li><a href="../../DashboardWidget.html">DashboardWidget</a>
+  
+    <li><a href="../../DashboardWidgetsController.html">DashboardWidgetsController</a>
+  
+    <li><a href="../../DashboardsController.html">DashboardsController</a>
+  
+    <li><a href="../../DashboardsHelper.html">DashboardsHelper</a>
+  
+    <li><a href="../../GangliaGraph.html">GangliaGraph</a>
+  
+    <li><a href="../../GangliaGraphsController.html">GangliaGraphsController</a>
+  
+    <li><a href="../../GangliaGraphsHelper.html">GangliaGraphsHelper</a>
+  
+    <li><a href="../../GithubCommit.html">GithubCommit</a>
+  
+    <li><a href="../../GithubCommitsController.html">GithubCommitsController</a>
+  
+    <li><a href="../../GithubCommitsHelper.html">GithubCommitsHelper</a>
+  
+    <li><a href="../../HudsonBuildStatus.html">HudsonBuildStatus</a>
+  
+    <li><a href="../../HudsonBuildStatusesController.html">HudsonBuildStatusesController</a>
+  
+    <li><a href="../../HudsonBuildStatusesHelper.html">HudsonBuildStatusesHelper</a>
+  
+    <li><a href="../../JiraCountdown.html">JiraCountdown</a>
+  
+    <li><a href="../../JiraCountdownsController.html">JiraCountdownsController</a>
+  
+    <li><a href="../../JiraCountdownsHelper.html">JiraCountdownsHelper</a>
+  
+    <li><a href="../../JiraIssueSummariesController.html">JiraIssueSummariesController</a>
+  
+    <li><a href="../../JiraIssueSummariesHelper.html">JiraIssueSummariesHelper</a>
+  
+    <li><a href="../../JiraIssueSummary.html">JiraIssueSummary</a>
+  
+    <li><a href="../../RemoteDataHelper.html">RemoteDataHelper</a>
+  
+    <li><a href="../../SonarReport.html">SonarReport</a>
+  
+    <li><a href="../../SonarReportsController.html">SonarReportsController</a>
+  
+    <li><a href="../../SonarReportsHelper.html">SonarReportsHelper</a>
+  
+    <li><a href="../../VerticalSpacer.html">VerticalSpacer</a>
+  
+    <li><a href="../../VerticalSpacersController.html">VerticalSpacersController</a>
+  
+    <li><a href="../../VerticalSpacersHelper.html">VerticalSpacersHelper</a>
+  
+    <li><a href="../../Widget.html">Widget</a>
+  
+    <li><a href="../../WidgetsController.html">WidgetsController</a>
+  
+    <li><a href="../../WidgetsHelper.html">WidgetsHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module Extensions::JiraBase::InstanceMethods</h1>
+
+  <div id="description" class="description">
+    
+<p>Methods used to pull additional data from JIRA.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-full_project_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">full_project_name</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The full name of a project specified by its abbreviated name. Connects to
+JIRA.</p>
+          
+
+          
+          <div class="method-source-code" id="full_project_name-source">
+            <pre><span class="ruby-comment"># File app/models/extensions/jira_base.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">full_project_name</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>
+  
+  <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getProject</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">project</span>).<span class="ruby-identifier">name</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- full_project_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- full_project_name-method -->
+
+    
+      <div id="method-i-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Log into JIRA if necessary.</p>
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre><span class="ruby-comment"># File app/models/extensions/jira_base.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
+  <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@jira</span>)
+    <span class="ruby-ivar">@jira</span> = <span class="ruby-constant">Jira4R</span><span class="ruby-operator">::</span><span class="ruby-constant">JiraTool</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">jira_server</span>)
+    <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">login</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">username</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">password</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- login-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- login-method -->
+
+    
+      <div id="method-i-next_release" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">next_release</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Determines the next upcoming version associated with a JIRA project.
+Returns a Hash containing <code>name</code> and <code>release_date</code>
+keys. Connects to JIRA.</p>
+          
+
+          
+          <div class="method-source-code" id="next_release-source">
+            <pre><span class="ruby-comment"># File app/models/extensions/jira_base.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">next_release</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">login</span>
+  
+  <span class="ruby-identifier">versions</span> = <span class="ruby-ivar">@jira</span>.<span class="ruby-identifier">getVersions</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">project</span>)
+  
+  <span class="ruby-comment"># create an array of versions with release dates in the future and sort it</span>
+  <span class="ruby-identifier">release_dates</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>;
+  
+  <span class="ruby-comment"># populate release date array with hashes</span>
+  <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">version</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">version</span>.<span class="ruby-identifier">releaseDate</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">releaseDate</span>.<span class="ruby-identifier">future?</span>)
+      <span class="ruby-identifier">release_dates</span>.<span class="ruby-identifier">push</span>({<span class="ruby-string">'name'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">name</span>, <span class="ruby-string">'release_date'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">releaseDate</span>})
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># sort array by release_date key in hash</span>
+  <span class="ruby-identifier">release_dates</span> = <span class="ruby-identifier">release_dates</span>.<span class="ruby-identifier">sort_by</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">|</span>
+    <span class="ruby-identifier">version</span>[<span class="ruby-string">&quot;release_date&quot;</span>]
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># return name of the first version in the array</span>
+  <span class="ruby-identifier">release_dates</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- next_release-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- next_release-method -->
+
+    
+      <div id="method-i-true_version" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">true_version</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The name of the next version of a JIRA project. If <code>version</code> is
+not “<code>current</code>”, this will just return the value of
+<code>version</code> as-is. Connects to JIRA if <code>version</code> is
+“<code>current</code>”.</p>
+          
+
+          
+          <div class="method-source-code" id="true_version-source">
+            <pre><span class="ruby-comment"># File app/models/extensions/jira_base.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">true_version</span>
+  <span class="ruby-comment"># supplied version is &quot;current&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>.<span class="ruby-identifier">casecmp</span>(<span class="ruby-string">&quot;current&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_release</span>[<span class="ruby-string">&quot;name&quot;</span>]
+  <span class="ruby-comment"># supplied version is not &quot;current&quot;, just return supplied version</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- true_version-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- true_version-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

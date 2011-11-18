@@ -1,0 +1,29 @@
+<div id='ganglia-graph-view' class='widget-view ganglia-graph'>
+    <%= render :partial => @ganglia_graph, :locals => { :target_element => 'ganglia-graph-view' } %>
+</div>
+
+<div id='ganglia-graph-info' class='widget-info ganglia-graph'>
+    <p id="notice"><%= notice %></p>
+    
+    <p>
+        <b>Name:</b>
+        <%= @ganglia_graph.name %>
+    </p>
+    <p>
+        <b>Description:</b>
+        <%= @ganglia_graph.description %>
+    </p>
+    <p>
+        <b>URI:</b>
+        <a href='<%= @ganglia_graph.uri %>'><%= @ganglia_graph.uri %></a>
+    </p>
+    <p>
+        <b>Kind:</b>
+        <%= @ganglia_graph.kind %>
+    </p>
+
+    <div id='ganglia-graph-controls' class='widget-info-controls ganglia-graph'>
+        <%= link_to 'Edit', edit_ganglia_graph_path(@ganglia_graph) %> |
+        <%= link_to 'Back', ganglia_graphs_path %>
+    </div>
+</div>

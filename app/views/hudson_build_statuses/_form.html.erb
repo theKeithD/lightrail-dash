@@ -1,0 +1,33 @@
+<%= form_for(@hudson_build_status) do |f| %>
+  <% if @hudson_build_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hudson_build_status.errors.count, "error") %> prohibited this hudson_build_status from being saved:</h2>
+
+      <ul>
+      <% @hudson_build_status.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :hudson_server %><br />
+    <%= f.text_field :hudson_server %>
+  </div>
+  <div class="field">
+    <%= f.label :build %><br />
+    <%= f.text_field :build %>
+  </div>
+  <div class="field">
+    <%= f.label :show_overall_status %><br />
+    <%= f.check_box :show_overall_status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

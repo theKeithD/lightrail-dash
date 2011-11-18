@@ -1,0 +1,34 @@
+<h1>Listing widgets</h1>
+
+<table>
+  <tr>
+    <th>Widget ID</th>
+    <th>Widget Type</th>
+    <th>Widget Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# Wrapping in Array() in case we only have a single result. DataMapper doesn't seem to treat single-row results as arrays. %>
+<% Array(@widgets).each do |widget| %>
+  <tr>
+    <td><%= widget.id %></td>
+    <td><%= link_to widget.widgetable_type, true_widget_listing_path(widget) %></td>
+    <td><%= true_widget(widget).name %></td>
+    <td><%= link_to 'Show', true_widget_path(widget) %></td>
+    <td><%= link_to 'Edit', true_widget_path(widget, :action => 'edit') %></td>
+    <td><%= link_to 'Destroy', widget, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ganglia Graph', new_ganglia_graph_path %> | 
+<%= link_to 'New Sonar Report', new_sonar_report_path %> |
+<%= link_to 'New JIRA Countdown', new_jira_countdown_path %> | 
+<%= link_to 'New JIRA Issue Summary', new_jira_issue_summary_path %> | 
+<%= link_to 'New Hudson Build Status', new_hudson_build_status_path %> |
+<%= link_to 'New GitHub Commit Feed', new_github_commit_path %> |
+<%= link_to 'New Vertical Spacer', new_vertical_spacer_path %>

@@ -1,0 +1,36 @@
+<div id='jira-countdown-view' class='widget-view jira-countdown'>
+    <%= render :partial => @jira_countdown, :locals => { :target_element => 'jira-countdown-view' } %>
+</div>
+<div id='jira-countdown-info' class='widget-info jira-countdown'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @jira_countdown.name %>
+    </p>
+    <p>
+      <b>JIRA server:</b>
+      <a href='<%= @jira_countdown.jira_server %>'><%= @jira_countdown.jira_server %></a>
+    </p>
+    <p>
+      <b>Project:</b>
+      <%= @jira_countdown.project %>
+    </p>
+    <p>
+      <b>Full Project Name:</b>
+      <%= @jira_countdown.full_project_name %>
+    </p>
+    <p>
+      <b>Version:</b>
+      <%= @jira_countdown.version %>
+    </p>
+    <p>
+      <b>Username:</b>
+      <%= @jira_countdown.username %>
+    </p>
+
+    <div id='jira-countdown-controls' class='widget-info-controls jira-countdown'>
+        <%= link_to 'Edit', edit_jira_countdown_path(@jira_countdown) %> |
+        <%= link_to 'Back', jira_countdowns_path %>
+    </div>
+</div>

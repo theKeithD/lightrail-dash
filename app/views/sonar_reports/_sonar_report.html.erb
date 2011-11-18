@@ -1,0 +1,14 @@
+<%= javascript_tag do -%>
+$.ajax({
+  url: '<%= asset_path 'widgets/sonar_report' %>',
+  cache: true,
+  dataType: "script",
+  success: function() {
+    var sonar_report = <%= raw sonar_report.to_json %>;
+    
+    createReportFromModel(sonar_report<%= if defined? target_element
+        ", $('\##{target_element}')"
+        end -%>);
+  }
+});
+<% end -%>

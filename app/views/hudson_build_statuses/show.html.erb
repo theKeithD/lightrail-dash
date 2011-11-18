@@ -1,0 +1,30 @@
+<div id='hudson-build-status-view' class='widget-view hudson-build-status'>
+    <%= render :partial => @hudson_build_status, :locals => { :target_element => 'hudson-build-status-view' } %>
+</div>
+
+<div id='hudson-build-status-info' class='widget-info hudson-build-status'>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @hudson_build_status.name %>
+    </p>
+
+    <p>
+      <b>Hudson server:</b>
+      <a href='<%= @hudson_build_status.hudson_server %>'><%= @hudson_build_status.hudson_server %></a>
+    </p>
+
+    <p>
+      <b>Build:</b>
+      <%= @hudson_build_status.build %>
+    </p>
+    
+    <p>
+      <b>Show overall status:</b>
+      <%= @hudson_build_status.show_overall_status %>
+    </p>
+</div>
+
+<%= link_to 'Edit', edit_hudson_build_status_path(@hudson_build_status) %> |
+<%= link_to 'Back', hudson_build_statuses_path %>
